@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Platforms>
+  <Platform name="Android" />
+  <Platform name="iOS" />
+  <Platform name="WebGL" />
+</Platforms>

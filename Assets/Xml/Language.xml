@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Languages>
+  <DefaultLanguage name="en" full="English"/>
+  <Language name="jp" full="Japanese"/>
+</Languages>
