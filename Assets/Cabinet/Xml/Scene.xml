@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Scenes>
+  <Scene scene="Error" type="Zara.Main.Ui.Error.ErrorSceneStarter" stratum="Frontmost" builtin="true"/>
+  <Scene scene="Loading" type="Zara.Main.Ui.Loading.LoadingSceneStarter" stratum="Overlay" builtin="true"/>
+  <Scene scene="Title" type="Zara.Main.Ui.Title.TitleSceneStarter" stratum="Core" builtin="false"/>
+  <Scene scene="Download" type="Zara.Main.Ui.Download.DownloadSceneStarter" stratum="Core" builtin="false"/>
+  <Scene scene="First" type="Zara.Main.Ui.First.FirstSceneStarter" stratum="Core" builtin="false"/>
+  <Scene scene="Plane" type="Zara.Main.Ui.Plane.PlaneSceneStarter" stratum="Background" builtin="false"/>
+  <Scene scene="Header" type="Zara.Main.Ui.Header.HeaderSceneStarter" stratum="Resident" builtin="false"/>
+  <Scene scene="Popup2d" type="Zara.Main.Ui.Popup2d.Popup2dSceneStarter" stratum="Popup" builtin="false"/>
+  <Scene scene="Popup3d" type="Zara.Main.Ui.Popup3d.Popup3dSceneStarter" stratum="Popup" builtin="false"/>
+</Scenes>

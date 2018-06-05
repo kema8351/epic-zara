@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc509e862900474eb33d9b002661653, type: 3}
+  m_Name: resource[jp][first]
+  m_EditorClassIdentifier: 
+  version: 20180603092614
+  platform: Android
+  assetBundleRecords:
+  - assetBundleName: scene/loading_b7fd92bf270589c5052df4e0cff96ac6.unity
+    dependencies: []
+    crc: 3789558327
+    fileSizeBytes: 41840
+  assetEntryRecords:
+  - assetEntryKey: scene/loading.unity
+    assetBundleName: scene/loading_b7fd92bf270589c5052df4e0cff96ac6.unity
+    assetName: Assets/Cabinet/AssetBundle/1[first]/Resources/Scene/Loading.unity
