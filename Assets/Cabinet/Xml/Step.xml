@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Steps>
+  <Step name="first" step="1" />
+  <Step name="title" step="2" />
+  <DefaultStep name="all" step="9" />
+</Steps>

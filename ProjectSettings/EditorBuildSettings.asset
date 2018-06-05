@@ -6,5 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Test.unity
-    guid: ff10685335449094797109821d5fa3fc
+    path: Assets/Cabinet/BuiltinAsset/Scene/Permanent.unity
+    guid: bb83435a1b782df4c843c0e0c8cd8172
+  - enabled: 1
+    path: Assets/Cabinet/BuiltinAsset/Scene/Error.unity
+    guid: 235f55b3715138b4bb6d7a28f6679539
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/1[first]/Resources/Scene/Loading.unity
+    guid: bc6ab2c493b38a64285162df9373a286
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/2[title]/Resources/Scene/Title.unity
+    guid: 48d91231334235c4782c804914dcb7b1
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/2[title]/Resources/Scene/Download.unity
+    guid: 641be341bfc32ee408b940a4ea8cfb14
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/9all/Resources/Scene/Header.unity
+    guid: a19208ca08f11d7409ef1e1135823f7f
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/9all/Resources/Scene/Plane.unity
+    guid: 641f3cb739dbcc34d86f941b7346bcc1
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/9all/Resources/Scene/First.unity
+    guid: 048400544515a1345bc123105934cbde
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/9all/Resources/Scene/Popup2d.unity
+    guid: e95f6ff25a250aa4daf4d8c5199691ca
+  - enabled: 1
+    path: Assets/Cabinet/AssetBundle/9all/Resources/Scene/Popup3d.unity
+    guid: a854d9284770f33458adc23296c0a0d4
