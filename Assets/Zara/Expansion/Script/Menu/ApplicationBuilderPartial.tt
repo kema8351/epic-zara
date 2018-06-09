@@ -1,0 +1,70 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ assembly name="System.Xml.Linq.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#
+var platformXElement = XElement.Load(this.Host.ResolveAssemblyReference("$(ProjectDir)/Assets/Cabinet/Xml/Platform.xml"));
+var platformQuery = from t in platformXElement.Elements("Platform") select t;
+var environmentXElement = XElement.Load(this.Host.ResolveAssemblyReference("$(ProjectDir)/Assets/Cabinet/Xml/Environment.xml"));
+var environmentQuery = from t in environmentXElement.Elements("Environment") select t;
+var sceneXElement = XElement.Load(this.Host.ResolveAssemblyReference("$(ProjectDir)/Assets/Cabinet/Xml/Scene.xml"));
+var sceneQuery = from t in sceneXElement.Elements("Scene") select t;
+var additionalSceneQuery = from t in sceneXElement.Elements("AdditionalScene") select t;
+#>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using Zara.Common.ExAssetBundle;
+using System;
+
+namespace Zara.Expansion.Menu.Editor
+{
+#if UNITY_EDITOR
+    public partial class ApplicationBuilder
+    {<#
+foreach (var p in platformQuery)
+{
+    string platform = p.Attribute("name").Value;
+
+    foreach (var e in environmentQuery)
+    {
+        string environment = e.Attribute("name").Value;
+        string options = e.Attribute("options").Value;
+        #>
+        [MenuItem(MenuDirPath + "<#= environment #>/<#= platform #>")]
+        static void BuildFor<#= environment #>Of<#= platform #>()
+        {
+            Build(BuildTarget.<#= platform #>, <#= options #>);
+        }
+        <#
+    }
+}
+        #>
+        static IEnumerable<string> EnumerateSceneNames()
+        {<#
+        foreach (var t in additionalSceneQuery)
+        {
+            string name = t.Attribute("scene").Value;
+        #>
+            yield return "<#= name #>";<#
+        }
+        foreach (var t in sceneQuery)
+        {
+            string builtin = t.Attribute("builtin").Value;
+            if(builtin != "true")
+                continue;
+
+            string name = t.Attribute("scene").Value;
+        #>
+            yield return "<#= name #>";<#
+        }#>
+        }
+    }
+#endif
+}

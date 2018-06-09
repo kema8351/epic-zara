@@ -43,6 +43,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AssetBundleMenuItemPartial.cs</LastGenOutput>
     </Content>
+    <Content Include="Assets\Zara\Expansion\Script\Menu\BuildingPartial.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BuildingPartial.cs</LastGenOutput>
+    </Content>
     <Content Include="Assets\Zara\Expansion\Script\Scene\SceneCallerPartial.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SceneCallerPartial.cs</LastGenOutput>
@@ -62,6 +66,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AssetBundleMenuItemPartial.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Zara\Expansion\Script\Menu\BuildingPartial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildingPartial.tt</DependentUpon>
     </Compile>
     <Compile Include="Assets\Zara\Expansion\Script\Scene\SceneCallerPartial.cs">
       <AutoGen>True</AutoGen>
