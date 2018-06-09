@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Environments>
+  <Environment name="Debug" options="BuildOptions.StrictMode | BuildOptions.Development | BuildOptions.AllowDebugging"/>
+  <Environment name="Release" options="BuildOptions.StrictMode"/>
+</Environments>
