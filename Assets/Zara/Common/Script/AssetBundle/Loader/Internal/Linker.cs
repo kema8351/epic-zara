@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEngine;
 using Zara.Common.Utility;
@@ -42,7 +41,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         public void LoadAsset<T>(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords,
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords,
             Action<T> onLoaded) where T : UnityEngine.Object
         {
             AddLodingTask(
@@ -55,7 +54,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         public void LoadMultipleAssets<T>(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords,
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords,
             Action<T[]> onLoaded) where T : UnityEngine.Object
         {
             AddLodingTask(
@@ -68,7 +67,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         public void LoadPrefab<T>(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords,
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords,
             Action<T> onLoaded) where T : Component
         {
             AddLodingTask(
@@ -84,7 +83,7 @@ namespace Zara.Common.ExAssetBundle.Internal
         {
             AddLodingTask(
                 new AssetEntryRecord(tablePath, tablePath, null),
-                new FixedList<AssetBundleRecord>(new List<AssetBundleRecord>() { new AssetBundleRecord(tablePath) }),
+                new List<AssetBundleRecord>() { new AssetBundleRecord(tablePath) },
                 onLoaded,
                 LinkerFuncs.Table.GetAssetBundleRequestFunc,
                 LinkerFuncs.Table.GetAssetFunc);
@@ -92,7 +91,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         public void LoadScene(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords)
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords)
         {
             AddLodingTask(
                 assetEntryRecord,
@@ -104,7 +103,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         public void LoadSceneAdditive(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords)
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords)
         {
             AddLodingTask(
                 assetEntryRecord,
@@ -116,7 +115,7 @@ namespace Zara.Common.ExAssetBundle.Internal
 
         void AddLodingTask<T>(
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords,
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords,
             Action<T> onLoaded,
             Func<AssetBundle, AssetEntryRecord, AsyncOperationSet> getAssetBundleRequestFunc,
             Func<AssetBundleRequest, T> getAssetFunc)
@@ -255,7 +254,7 @@ namespace Zara.Common.ExAssetBundle.Internal
         IEnumerator GetAsset<T>(
             int loadingTaskId,
             AssetEntryRecord assetEntryRecord,
-            FixedList<AssetBundleRecord> necessaryAssetBundleRecords,
+            IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords,
             Action<T> onLoaded,
             Func<AssetBundle, AssetEntryRecord, AsyncOperationSet> getAssetbundleRequestFunc,
             Func<AssetBundleRequest, T> getAssetFunc)
@@ -294,7 +293,7 @@ namespace Zara.Common.ExAssetBundle.Internal
             FinishLoadingTask(loadingTaskId, necessaryAssetBundleRecords);
         }
 
-        void FinishLoadingTask(int loadingTaskId, FixedList<AssetBundleRecord> necessaryAssetBundleRecords)
+        void FinishLoadingTask(int loadingTaskId, IReadOnlyList<AssetBundleRecord> necessaryAssetBundleRecords)
         {
             foreach (AssetBundleRecord assetBundleRecord in necessaryAssetBundleRecords)
             {

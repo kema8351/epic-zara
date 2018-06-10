@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zara.Common.Utility;
@@ -45,12 +43,12 @@ namespace Zara.Common.ExAssetBundle
             }
         }
 
-        Dictionary<string, FixedList<AssetBundleRecord>> necessaryAssetBundleRecordsDictionary = new Dictionary<string, FixedList<AssetBundleRecord>>();
+        Dictionary<string, IReadOnlyList<AssetBundleRecord>> necessaryAssetBundleRecordsDictionary = new Dictionary<string, IReadOnlyList<AssetBundleRecord>>();
         HashSet<string> temporaryHashSet = new HashSet<string>();
 
-        public FixedList<AssetBundleRecord> GetNecessaryAssetBundleRecords(string assetEntryKey)
+        public IReadOnlyList<AssetBundleRecord> GetNecessaryAssetBundleRecords(string assetEntryKey)
         {
-            FixedList<AssetBundleRecord> cache;
+            IReadOnlyList<AssetBundleRecord> cache;
             if (necessaryAssetBundleRecordsDictionary.TryGetValue(assetEntryKey, out cache))
                 return cache;
 
@@ -61,16 +59,16 @@ namespace Zara.Common.ExAssetBundle
             return result;
         }
 
-        FixedList<AssetBundleRecord> GetNecessaryAssetBundleRecords(AssetEntryRecord assetEntryRecord)
+        IReadOnlyList<AssetBundleRecord> GetNecessaryAssetBundleRecords(AssetEntryRecord assetEntryRecord)
         {
             var necessaryAssetBundleRecords = new List<AssetBundleRecord>();
             if (assetEntryRecord == null)
-                return new FixedList<AssetBundleRecord>(necessaryAssetBundleRecords);
+                return necessaryAssetBundleRecords;
 
             string assetBundleName = assetEntryRecord.AssetBundleName;
             AssetBundleRecord assetBundleRecord = this.AssetBundleRecordMap.Get(assetBundleName);
             if (assetBundleRecord == null)
-                return new FixedList<AssetBundleRecord>(necessaryAssetBundleRecords);
+                return necessaryAssetBundleRecords;
 
             temporaryHashSet.Add(assetBundleName);
             GetNecessaryAssetBundleRecords(
@@ -79,7 +77,7 @@ namespace Zara.Common.ExAssetBundle
                 ref necessaryAssetBundleRecords);
 
             temporaryHashSet.Clear();
-            return new FixedList<AssetBundleRecord>(necessaryAssetBundleRecords);
+            return necessaryAssetBundleRecords;
         }
 
         void GetNecessaryAssetBundleRecords(

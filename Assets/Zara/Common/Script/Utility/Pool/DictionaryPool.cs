@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace Zara.Common.Utility
 {
     public class MapPool<T, TKey, TValue> where T : IDictionary<TKey, TValue>, new()
     {
-        public static MapPool<T, TKey, TValue> Pool { get; } = new MapPool<T, TKey, TValue>(); 
+        public static MapPool<T, TKey, TValue> Pool { get; } = new MapPool<T, TKey, TValue>();
 
         Stack<T> pool = new Stack<T>();
 

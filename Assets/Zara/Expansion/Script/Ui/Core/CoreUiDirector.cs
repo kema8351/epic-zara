@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using Zara.Common.ExScene;
 using Zara.Common.Ui;
-using Zara.Common.Utility;
 using Zara.Expansion.ExScene;
 
 namespace Zara.Expansion.Ui

@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using Zara.Common.Utility;
 
 namespace Zara.Common.Ui
@@ -13,7 +11,7 @@ namespace Zara.Common.Ui
         public void ReplaceCameraMatList(int stratumId, IEnumerable<CameraMat> cameraMats)
         {
             List<CameraMat> cameraMatList = this.cameraMatListDictionary.GetValue(stratumId, false);
-            if(cameraMatList == null)
+            if (cameraMatList == null)
             {
                 cameraMatList = new List<CameraMat>();
                 this.cameraMatListDictionary.Add(stratumId, cameraMatList);

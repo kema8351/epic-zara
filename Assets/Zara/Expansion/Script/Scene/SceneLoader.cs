@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System;
-using Zara.Common.ExScene;
+﻿using System;
+using UnityEngine;
 
 namespace Zara.Expansion.ExScene
 {

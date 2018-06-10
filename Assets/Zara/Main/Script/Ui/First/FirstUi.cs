@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Zara.Common.ExScene;
 using Zara.Expansion.Ui;
 
 namespace Zara.Main.Ui.First

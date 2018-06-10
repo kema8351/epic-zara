@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Zara.Common.Ui
+﻿namespace Zara.Common.Ui
 {
     public class Stratum
     {

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Zara.Common.ExCamera;
+﻿using UnityEngine;
 using Zara.Common.ExBase;
+using Zara.Common.ExCamera;
 
 namespace Zara.Common.Ui
 {

@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Zara.Common;
-using Zara.Common.ExCamera;
-using Zara.Common.ExScene;
-using Zara.Common.ExBase;
-using Zara.Common.Ui;
-using Zara.Expansion.ExCamera;
-using Zara.Expansion.ExScene;
-using Zara.Expansion.Ui;
-using Zara.Main.Ui;
-using Zara.Main.Ui.Header;
-using Zara.Main.Ui.Title;
-using Zara.Expansion.ExAssetBundle;
+﻿using System.Collections;
 using Zara.Common.ExAssetBundle;
+using Zara.Common.ExBase;
+using Zara.Expansion.ExAssetBundle;
+using Zara.Expansion.Ui;
 
 namespace Zara.Main
 {

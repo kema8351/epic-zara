@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using Zara.Common.ExScene;
 using Zara.Expansion.Ui;
 using Zara.Main.Ui.Popup2d;
 

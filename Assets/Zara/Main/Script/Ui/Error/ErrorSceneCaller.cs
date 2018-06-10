@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Zara.Common.Ui;
 using Zara.Expansion.ExScene;
-using Zara.Expansion.Ui;
 
 namespace Zara.Main.Ui.Error
 {

@@ -14,14 +14,10 @@ var sceneXElement = XElement.Load(this.Host.ResolveAssemblyReference("$(ProjectD
 var sceneQuery = from t in sceneXElement.Elements("Scene") select t;
 var additionalSceneQuery = from t in sceneXElement.Elements("AdditionalScene") select t;
 #>
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using Zara.Common.ExAssetBundle;
-using System;
 
 namespace Zara.Expansion.Menu.Editor
 {
