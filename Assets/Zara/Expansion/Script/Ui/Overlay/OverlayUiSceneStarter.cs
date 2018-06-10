@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using Zara.Common.ExScene;
 using Zara.Common.ExBase;
-using Zara.Common.Menu;
+using Zara.Common.ExScene;
 using Zara.Common.Ui;
-using Zara.Common.Utility;
 
 namespace Zara.Expansion.Ui
 {

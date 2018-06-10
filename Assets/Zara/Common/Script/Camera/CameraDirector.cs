@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace Zara.Common.ExCamera
 {
@@ -16,7 +14,7 @@ namespace Zara.Common.ExCamera
         CameraDepthModifier cameraDepthModifier;
 
         public CameraDirector(IEnumerable<StudioSetting> studioSettings)
-        { 
+        {
             cameraRepository = new CameraRepository();
             cameraDepthModifier = new CameraDepthModifier(studioSettings, cameraRepository);
         }

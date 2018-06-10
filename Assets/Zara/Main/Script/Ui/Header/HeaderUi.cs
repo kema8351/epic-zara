@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Zara.Common.Ui;
 using Zara.Expansion.Ui;
 
 namespace Zara.Main.Ui.Header

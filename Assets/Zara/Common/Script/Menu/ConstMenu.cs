@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Zara.Common.Menu
+﻿namespace Zara.Common.Menu
 {
 #if UNITY_EDITOR
     public static class ConstMenu

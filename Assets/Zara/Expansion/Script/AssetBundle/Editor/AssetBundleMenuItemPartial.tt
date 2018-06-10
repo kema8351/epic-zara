@@ -15,12 +15,7 @@ var stepXElement = XElement.Load(this.Host.ResolveAssemblyReference("$(ProjectDi
 var stepQuery = from t in stepXElement.Elements("Step") select t;
 var defaultStepQuery = from t in stepXElement.Elements("DefaultStep") select t;
 #>
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
-using Zara.Common.ExAssetBundle;
-using System;
 using Zara.Common.ExAssetBundle.Editor;
 
 namespace Zara.Expansion.ExAssetBundle.Editor

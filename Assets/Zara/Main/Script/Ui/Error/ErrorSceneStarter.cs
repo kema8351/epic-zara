@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using Zara.Common.ExBase;
-using Zara.Common.Ui;
 using Zara.Expansion.Ui;
 
 namespace Zara.Main.Ui.Error

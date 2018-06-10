@@ -1,9 +1,4 @@
-﻿using UnityEngine;
-using System;
-using Zara.Common.ExScene;
-using Zara.Expansion.Ui;
-
-namespace Zara.Expansion.ExScene
+﻿namespace Zara.Expansion.ExScene
 {
     public partial class SceneCaller
     {

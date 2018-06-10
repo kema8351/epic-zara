@@ -3,11 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zara.Common;
-using Zara.Common.ExScene;
 using Zara.Common.ExBase;
-using Zara.Common.Menu;
-using Zara.Common.Ui;
 using Zara.Common.Utility;
 using Zara.Expansion.ExBase;
 

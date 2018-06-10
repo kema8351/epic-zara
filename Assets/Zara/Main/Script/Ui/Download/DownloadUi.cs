@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zara.Common.ExAssetBundle;
-using Zara.Common.ExScene;
 using Zara.Expansion.Ui;
-using Zara.Main.Ui.Title;
 
 namespace Zara.Main.Ui.Download
 {

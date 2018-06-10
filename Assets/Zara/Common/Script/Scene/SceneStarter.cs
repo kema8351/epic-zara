@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using UnityEngine;
 using Zara.Common.ExBase;
 
 namespace Zara.Common.ExScene

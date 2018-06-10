@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-
-namespace Zara.Common.ExBase
+﻿namespace Zara.Common.ExBase
 {
     public class AutoAddAttribute : AutoAttribute
     {

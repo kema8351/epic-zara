@@ -1,10 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-using System.Linq;
-
-namespace Zara.Common.Utility
+﻿namespace Zara.Common.Utility
 {
     public class IdGenerator
     {

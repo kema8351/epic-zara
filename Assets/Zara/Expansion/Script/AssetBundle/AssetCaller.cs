@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zara.Common.ExAssetBundle;
 using Zara.Common.ExBase;
-using Zara.Common.Utility;
-using Zara.Main;
 using Zara.Main.Ui.Error;
 
 namespace Zara.Expansion.ExAssetBundle

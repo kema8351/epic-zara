@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Zara.Common.Utility
+﻿namespace Zara.Common.Utility
 {
     public static class StringExtension
     {

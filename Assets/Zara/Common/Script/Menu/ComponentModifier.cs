@@ -6,7 +6,6 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 using UnityEngine;
-using Zara.Common.ExBase;
 
 namespace Zara.Common.Menu
 {

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zara.Common.ExAssetBundle.Internal;
-using Zara.Common.ExBase;
 using Zara.Common.Utility;
 
 namespace Zara.Common.ExAssetBundle

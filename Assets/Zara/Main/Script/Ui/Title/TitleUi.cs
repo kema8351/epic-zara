@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Zara.Common.ExAssetBundle;
-using Zara.Common.ExScene;
 using Zara.Expansion.ExAssetBundle;
 using Zara.Expansion.Ui;
 
