@@ -15,15 +15,15 @@ namespace Zara.Expansion.ExScene
     {
         public SceneLoader(SceneDirector sceneDirector)
         {
-            LoadingActionCache<Zara.Main.Ui.Error.ErrorSceneStarter>.Action = onLoaded => sceneDirector.LoadFromBuiltinAsset("Error", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Loading.LoadingSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Loading", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Title.TitleSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Title", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Download.DownloadSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Download", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.First.FirstSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("First", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Plane.PlaneSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Plane", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Header.HeaderSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Header", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Popup2d.Popup2dSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Popup2d", onLoaded); 
-            LoadingActionCache<Zara.Main.Ui.Popup3d.Popup3dSceneStarter>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("Popup3d", onLoaded);
+            LoadingActionCache<Zara.Main.Ui.Error.ErrorSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromBuiltinAsset("Error", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Loading.LoadingSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Loading", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Title.TitleSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Title", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Download.DownloadSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Download", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.First.FirstSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("First", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Plane.PlaneSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Plane", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Header.HeaderSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Header", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Popup2d.Popup2dSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Popup2d", onLoaded)); 
+            LoadingActionCache<Zara.Main.Ui.Popup3d.Popup3dSceneStarter>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("Popup3d", onLoaded));
         }
     }
 }

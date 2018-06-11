@@ -5,11 +5,9 @@ using Zara.Expansion.ExScene;
 
 namespace Zara.Expansion.Ui
 {
-    public class OverlayUiDirector : IOverlayUiBank
+    public class OverlayUiDirector : Singleton<OverlayUiDirector>, IOverlayUiBank
     {
-        public static OverlayUiDirector Instance { get; } = new OverlayUiDirector();
-
-        public OverlayUiDirector()
+        public OverlayUiDirector() : base()
         {
         }
 
@@ -25,13 +23,13 @@ namespace Zara.Expansion.Ui
 
         public OverlayUiOperator Show<T>() where T : IOverlayUiCanvas
         {
-            if (Cache<T>.Status == null)
+            if (StatusCache<T>.Cache == null)
             {
-                Cache<T>.Status = new OverlayUiStatus<T>(idGenerator);
+                StatusCache<T>.SetCache(new OverlayUiStatus<T>(idGenerator));
                 sceneLoader.Load<T>();
             }
 
-            OverlayUiStatus<T> status = Cache<T>.Status;
+            OverlayUiStatus<T> status = StatusCache<T>.Cache;
             return status.GetChecker();
         }
 
@@ -43,7 +41,7 @@ namespace Zara.Expansion.Ui
                 return;
             }
 
-            OverlayUiStatus<T> status = Cache<T>.Status;
+            OverlayUiStatus<T> status = StatusCache<T>.Cache;
             if (status == null)
             {
                 Debug.LogError($"has not inited status by using Show function: {typeof(T).Name}");
@@ -60,9 +58,8 @@ namespace Zara.Expansion.Ui
             canvasBank.AddCanvas(canvasInStratum);
         }
 
-        class Cache<T> where T : IOverlayUiCanvas
+        class StatusCache<T> : StaticLazyCache<StatusCache<T>, OverlayUiStatus<T>> where T : IOverlayUiCanvas
         {
-            public static OverlayUiStatus<T> Status;
         }
     }
 

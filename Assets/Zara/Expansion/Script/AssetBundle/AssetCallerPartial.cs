@@ -1,12 +1,4 @@
-﻿
-
-
-
-
-
-
-
-using UnityEngine;
+﻿using UnityEngine;
 using Zara.Common.ExBase;
 
 namespace Zara.Expansion.ExAssetBundle
@@ -44,13 +36,11 @@ namespace Zara.Expansion.ExAssetBundle
         First,
         Title,
         All,
-
     }
 
     public enum AssetLanguage
     {
         Japanese,
         English,
-
     }
 }
