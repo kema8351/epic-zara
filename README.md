@@ -1,6 +1,6 @@
 # epic-zara-client
 
-I'm making this project to learn Unity. It helps me develop games. Basic functionality is currently being made.
+I'm making this project to learn Unity. It helps me develop games. Basic functionalities are currently being made.
 
 ## AssetBundleDirector (2018-02-21)
 
