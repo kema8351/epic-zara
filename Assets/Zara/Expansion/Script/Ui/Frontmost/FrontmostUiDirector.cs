@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using Zara.Common.Ui;
+using Zara.Common.Utility;
 
 namespace Zara.Expansion.Ui
 {
-    public class FrontmostUiDirector : IFrontmostUiBank
+    public class FrontmostUiDirector : Singleton<FrontmostUiDirector>, IFrontmostUiBank
     {
-        public static FrontmostUiDirector Instance { get; } = new FrontmostUiDirector();
-
-        public FrontmostUiDirector()
+        public FrontmostUiDirector() : base()
         {
         }
 

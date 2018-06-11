@@ -5,11 +5,9 @@ using Zara.Common.Utility;
 
 namespace Zara.Expansion.Ui
 {
-    public class BackgroundUiDirector : IBackgroundUiBank
+    public class BackgroundUiDirector : Singleton<BackgroundUiDirector>, IBackgroundUiBank
     {
-        public static BackgroundUiDirector Instance { get; } = new BackgroundUiDirector();
-
-        public BackgroundUiDirector()
+        public BackgroundUiDirector() : base()
         {
         }
 

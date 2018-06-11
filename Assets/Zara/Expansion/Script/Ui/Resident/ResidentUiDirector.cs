@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using Zara.Common.Ui;
+using Zara.Common.Utility;
 
 namespace Zara.Expansion.Ui
 {
-    public class ResidentUiDirector : IResidentUiBank
+    public class ResidentUiDirector : Singleton<ResidentUiDirector>, IResidentUiBank
     {
-        public static ResidentUiDirector Instance { get; } = new ResidentUiDirector();
-
-        public ResidentUiDirector()
+        public ResidentUiDirector() : base()
         {
         }
 

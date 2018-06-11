@@ -27,11 +27,11 @@ namespace Zara.Expansion.ExScene
             if(isBuiltinAsset == "true")
             {
         #>
-            LoadingActionCache<<#= typeName #>>.Action = onLoaded => sceneDirector.LoadFromBuiltinAsset("<#= sceneName #>", onLoaded);<#
+            LoadingActionCache<<#= typeName #>>.SetCache(onLoaded => sceneDirector.LoadFromBuiltinAsset("<#= sceneName #>", onLoaded));<#
             }
             else
             {#> 
-            LoadingActionCache<<#= typeName #>>.Action = onLoaded => sceneDirector.LoadFromAssetBundle("<#= sceneName #>", onLoaded);<#
+            LoadingActionCache<<#= typeName #>>.SetCache(onLoaded => sceneDirector.LoadFromAssetBundle("<#= sceneName #>", onLoaded));<#
             }
         } #>
         }

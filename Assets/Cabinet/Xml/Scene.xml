@@ -11,4 +11,5 @@
   <Scene scene="Popup3d" type="Zara.Main.Ui.Popup3d.Popup3dSceneStarter" stratum="Popup" builtin="false"/>
 
   <AdditionalScene scene="Permanent"/>
+  <AdditionalScene scene="Restart"/>
 </Scenes>

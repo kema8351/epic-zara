@@ -1,15 +1,14 @@
 ﻿using System;
 using UnityEngine;
 using Zara.Common.Ui;
+using Zara.Common.Utility;
 using Zara.Expansion.ExScene;
 
 namespace Zara.Expansion.Ui
 {
-    public class CoreUiDirector : ICoreUiBank
+    public class CoreUiDirector : Singleton<CoreUiDirector>, ICoreUiBank
     {
-        public static CoreUiDirector Instance { get; } = new CoreUiDirector();
-
-        public CoreUiDirector()
+        public CoreUiDirector() : base()
         {
             onExited = OnExited;
             exitPreviousUiAction = ExitPreviousUi;

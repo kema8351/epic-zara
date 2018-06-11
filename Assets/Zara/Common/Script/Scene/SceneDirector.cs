@@ -6,19 +6,16 @@ using Zara.Common.Utility;
 
 namespace Zara.Common.ExScene
 {
-    public class SceneDirector : ILoadedActionHolder
+    public class SceneDirector : Singleton<SceneDirector>, ILoadedActionHolder
     {
-        public static SceneDirector Instance { get; } = new SceneDirector();
-
-        class LoadedActionCache<T>
+        class LoadedActionCache<T> : StaticInstanceCache<LoadedActionCache<T>, Queue<Action<T>>>
         {
-            public static Queue<Action<T>> Queue { get; } = new Queue<Action<T>>();
         }
 
         Action<string> loadFromAssetBundleAction;
         MonoBehaviour coroutineStarter;
 
-        public SceneDirector()
+        public SceneDirector() : base()
         {
         }
 
@@ -41,12 +38,12 @@ namespace Zara.Common.ExScene
 
         void EnqueueLoadedAction<T>(Action<T> onLoaded)
         {
-            LoadedActionCache<T>.Queue.Enqueue(onLoaded);
+            LoadedActionCache<T>.Cache.Enqueue(onLoaded);
         }
 
         void ILoadedActionHolder.RunLoadedAction<T>(T sceneStarter)
         {
-            var queue = LoadedActionCache<T>.Queue;
+            var queue = LoadedActionCache<T>.Cache;
             if (queue.IsEmpty())
             {
                 Debug.LogError($"empty loaded action cache: {typeof(T).Name}");

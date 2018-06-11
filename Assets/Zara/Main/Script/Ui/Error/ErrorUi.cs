@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zara.Expansion.Ui;
 
@@ -56,7 +57,7 @@ namespace Zara.Main.Ui.Error
 
         void OnQuitButtonClicked()
         {
-            Application.Quit();
+            SceneManager.LoadSceneAsync("Restart");
         }
 
         void OnRetryButtonClicked()

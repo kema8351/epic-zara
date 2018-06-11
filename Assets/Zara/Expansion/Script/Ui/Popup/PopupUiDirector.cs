@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Zara.Common.Ui;
+using Zara.Common.Utility;
 
 namespace Zara.Expansion.Ui
 {
-    public class PopupUiDirector : IPopupUiBank
+    public class PopupUiDirector : Singleton<PopupUiDirector>, IPopupUiBank
     {
-        public static PopupUiDirector Instance { get; } = new PopupUiDirector();
-
-        public PopupUiDirector()
+        public PopupUiDirector() : base()
         {
             refleshAction = Reflesh;
         }
