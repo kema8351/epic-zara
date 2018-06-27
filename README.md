@@ -18,4 +18,7 @@ Details: http://kema8351.hatenablog.com/entry/2018/06/06/203127 (Japanese)
 
 CanvasDirector manages canvases of uGUI. The canvases can be set appropriate sorting order automatically.
 
+Details: http://kema8351.hatenablog.com/entry/2018/06/14/211834 (Japanese)
+Details: http://kema8351.hatenablog.com/entry/2018/06/20/224549 (Japanese)
+
 ## NetworkDirector (next planned functionality)
